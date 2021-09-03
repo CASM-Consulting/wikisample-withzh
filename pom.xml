@@ -14,18 +14,22 @@
   		<resource>
   			<directory>sample</directory>
   			<includes>
+                <!-- en -->
 			  <include>wiki-samp.ser</include>
 			  <include>wiki-counts.ser</include>
 			  <include>wiki-inc-feat-counts.ser</include>
 			  <include>wiki-pipeline.ser</include>
+                <!-- zh -->
 			  <include>zh-wiki-articles.ser</include>
 			  <include>zh-wiki-count.ser</include>
 			  <include>zh-wiki-inc-feat-counts.ser</include>
 			  <include>zh-wiki-pipeline.ser</include>
+                <!-- ar -->
 			  <include>ar-wiki-articles.ser</include>
 			  <include>ar-wiki-count.ser</include>
 			  <include>ar-wiki-inc-feat-counts.ser</include>
 			  <include>ar-wiki-pipeline.ser</include>
+                <!-- de -->
 			  <include>de-wiki-20210823-cirrussearch-content-feat-counts.ser</include>
 			  <include>de-pipeline.ser</include>
 			</includes>
