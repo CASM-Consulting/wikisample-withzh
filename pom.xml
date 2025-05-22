@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ac.uk.susx.tag</groupId>
   <artifactId>wiki-sample</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
 
   <distributionManagement>
     <repository>
@@ -36,7 +36,28 @@
 			  <include>de-wiki-20210823-cirrussearch-content-feat-counts.ser</include>
 			  <include>de-pipeline.ser</include>
 			</includes>
-  		</resource>
+			<targetPath>.</targetPath>
+		</resource>
   	</resources>
+	  <plugins>
+		  <!-- Ensures files from resources are copied -->
+		  <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-resources-plugin</artifactId>
+			  <version>3.3.1</version>
+		  </plugin>
+
+		  <!-- Ensures they get included in the final JAR -->
+		  <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-jar-plugin</artifactId>
+			  <version>3.3.0</version>
+			  <configuration>
+				  <includes>
+					  <include>**/*.ser</include>
+				  </includes>
+			  </configuration>
+		  </plugin>
+	  </plugins>
   </build>
 </project>
